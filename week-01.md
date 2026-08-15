@@ -3,8 +3,9 @@
 
 
 ## 1. Task Description & Learning Objectives
-The primary objective of this task was to gain practical familiarity with the GNS3 network emulation environment. Key objectives included creating projects, deploying host nodes, annotating network topologies, configuring static IP interfaces prior to device boot-up via Linux configuration files, and validating interface states using Linux commands.
-![GNS Downloading](./images/GNS_downloading.png)
+The primary objective of this task was to gain practical familiarity with the GNS3 network emulation environment. Key objectives included creating projects, deploying host nodes, annotating network topologies, configuring static IP interfaces prior to device boot-up via Linux configuration files, and validating interface states using Linux commands.  
+
+![GNS Downloading](./images/GNS-downloading.png)
 
 
 ## 2. Step-by-Step Implementation & Reflective Analysis
