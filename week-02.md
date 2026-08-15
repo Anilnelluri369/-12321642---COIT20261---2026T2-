@@ -20,6 +20,22 @@ Editing configuration files on active devices demonstrates that Linux reads netw
 #### Approach C: Runtime Command-Line Configuration (Host 4)  
 Assigned the IP address dynamically via CLI:    
 ip address add 10.1.1.4/24 dev eth0  
-  ![](./images/week2-host4-addressshow.png)
+  ![](./images/week2-host4-addressshow.png)  
+  
+  # Task 2 - Testing Network Connectivity and Delay with Ping
+
+### Standard Connectivity Probing  
+Initiated a basic ping from Host A to Host B (`10.1.1.2`) without command-line options and allowed at least 5 response messages before manually stopping the process via `Ctrl+C`.
+## Command:
+  ping 10.1.1.2  
+   ![](./images/week2-task2-standardping.png)  
+   ### Unreachable Host Diagnostics & Packet Loss  
+   Executed a ping request to an inactive/non-existent IP address on the network (10.1.1.250) and let the request run for over 10 seconds before terminating.
+    ![](./images/week2-task2-advancedparameters.png)
+    
+   ### Customized ICMP Parameter Testing
+Tested advanced ping flags by restricting the packet count, adjusting the transmission interval, and altering payload data size.
+     ![](./images/week2-task2-unreachable.png)  
+  
 ## GNS PROJECT
 Project file Uploaded in Images file.
