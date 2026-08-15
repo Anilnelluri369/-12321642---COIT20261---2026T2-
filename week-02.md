@@ -31,7 +31,7 @@ Initiated a basic ping from Host A to Host B (`10.1.1.2`) without command-line o
    ![](./images/week2-task2-standardping.png)  
    ### Unreachable Host Diagnostics & Packet Loss  
    Executed a ping request to an inactive/non-existent IP address on the network (10.1.1.250) and let the request run for over 10 seconds before terminating.
-    ![](./images/week2-task2-advancedparameters.png)
+    ![](./images/week2-task2-advancedparameters.png)  
     
    ### Customized ICMP Parameter Testing
 Tested advanced ping flags by restricting the packet count, adjusting the transmission interval, and altering payload data size.
