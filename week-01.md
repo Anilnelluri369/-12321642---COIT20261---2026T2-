@@ -28,4 +28,7 @@ Configured the static IP address for eth0 before booting up the node by editing 
      up sysctl net.ipv4.ip_forward=0
 ![](./images/week1-networkconfiguration.png)
 ![](./images/week1-networkconfiguration.png)
+
+## GNS PROJECT
+Project file Uploaded in Images file.
   
