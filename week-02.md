@@ -21,3 +21,5 @@ Editing configuration files on active devices demonstrates that Linux reads netw
 Assigned the IP address dynamically via CLI:    
 ip address add 10.1.1.4/24 dev eth0  
   ![](./images/week2-host4-addressshow.png)
+## GNS PROJECT
+Project file Uploaded in Images file.
