@@ -32,10 +32,14 @@ The .pcap file and project file are uploaded in images folder
 
 ## Task 2: HTTP Client with Command Line Interface (CLI)
 
+ ![](./images/week4-task2-topology.png)
 ### Setup & Execution
-1. Cloned the Task 1 project into `HTTPClient-CLI-<studentid>`.
+1. Cloned the Task 1 project into `HTTPClient-CLI-12321642`.
 2. Replaced the Firefox Host with a lightweight Linux Host, assigning it the same IP address (`192.168.1.10/24`).
 3. Initiated packet capture on Subnet B.
 4. Opened Host 1 Web Console and fetched the web server content using `wget`:
    ```bash
    wget [http://192.168.2.10/](http://192.168.2.10/)
+   
+ ## Files
+The .pcap file and project file are uploaded in images folder
