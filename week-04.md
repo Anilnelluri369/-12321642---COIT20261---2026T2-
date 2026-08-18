@@ -25,7 +25,8 @@ The network consists of three distinct subnets linked by two static routers:
 3. Started packet capture on the Subnet B link (between Router 1 and Switch 2).
 4. Connected to Host 1 via **noVNC**, launched Firefox, and navigated to `http://192.168.2.10/`.
 5. Stopped packet capture and saved results.
-
+## Files
+The .pcap file and project file are uploaded in images folder
 
 
 
