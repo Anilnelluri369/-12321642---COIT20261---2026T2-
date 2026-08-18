@@ -9,9 +9,9 @@ The network consists of three distinct subnets linked by two static routers:
 * **Subnet A (`192.168.1.0/24`)**: Host 1 (HTTP Client) connected via Switch 1 to Router 1.
 * **Subnet B (`10.0.0.0/24`)**: Inter-router link connecting Router 1 and Router 2 via Switch 2.
 * **Subnet C (`192.168.2.0/24`)**: Host 2 (HTTP Server) connected via Switch 3 to Router 2.
-  
+  ![](./images/week4-task1-topology.png)
 
----
+
 
 ## Task 1: HTTP Client with GUI
 
@@ -26,12 +26,8 @@ The network consists of three distinct subnets linked by two static routers:
 4. Connected to Host 1 via **noVNC**, launched Firefox, and navigated to `http://192.168.2.10/`.
 5. Stopped packet capture and saved results.
 
-### Artifacts
-* `HTTPClient-GUI-<studentid>.gns3project`
-* `HTTPClient-GUI-<studentid>-network.png`
-* `HTTPClient-GUI-<studentid>-subnetB.pcap`
 
----
+
 
 ## Task 2: HTTP Client with Command Line Interface (CLI)
 
