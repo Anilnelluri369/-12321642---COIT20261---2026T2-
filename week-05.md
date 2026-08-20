@@ -89,16 +89,17 @@ Before starting any node, configure its static IP address, subnet mask, default 
 
 ## Task 2: Dynamic Routing with OSPF (FRRouting)
 
-### Step-by-Step GNS3 GUI Setup
 
-#### 1. Importing & Launching Template
-1. Go to **File** $\rightarrow$ **Import portable project**.
-2. Select `OSPF-Basics-Template.gns3project` and duplicate/save it as `OSPF-Basics-<studentid>.gns3project`.
-3. Click the **Green Play Button** to power on all devices.
-4. **Boot Wait Time**: Allow 2–3 minutes for the FRRouting (FRR) daemons to boot. Wait until the nodes load the `frr#` or `frr:~#` shell.
 
-#### 2. Accessing FRR Interactive CLI (`vtysh`)
-1. Right-click **FRR1** $\rightarrow$ select **Console**.
-2. If greeted with the standard Linux prompt (`frr:~#`), enter the VTY shell:
-   ```bash
-   frr:~# vtysh
+## 1. Importing & Launching Template
+  ![](./images/week5-task2-topology.png)
+
+## Verification, Neighbor Tables & Routing Matrix
+![](./images/week5-task2-neighbor.png)
+### Trace Route Path & Failover Simulation
+ ## Initial Path  
+ ![](./images/week5-task2-traceroute.png)
+ ## ALternative Path
+ ![](./images/week5-task2-failovertraceroute.png)
+ 
+ 
