@@ -77,21 +77,12 @@ Before starting any node, configure its static IP address, subnet mask, default 
    ![](./images/week5-task1-route.png)
 
 3. **Inspect Kernel Routing Tables (`ip route show`)**:
-   * Executing on **Host1**:
-     ```text
-     default via 10.1.1.1 dev eth0 
-     10.1.1.0/24 dev eth0 proto kernel scope link src 10.1.1.10
-     ```
-   * Executing on **Linux-Router**:
-     ```text
-     10.1.1.0/24 dev eth0 proto kernel scope link src 10.1.1.1 
-     10.1.2.0/24 dev eth1 proto kernel scope link src 10.1.2.1
-     ```
-   * Executing on **Host3**:
-     ```text
-     default via 10.1.2.1 dev eth0 
-     10.1.2.0/24 dev eth0 proto kernel scope link src 10.1.2.10
-     ```
+   * Executing on **Host1**:  
+   ![](./images/week5-task1-route1.png)
+   * Executing on **Host2**:  
+     ![](./images/week5-task1-route2.png)
+   * Executing on **Host3**:  
+      ![](./images/week5-task1-route3.png)
 
 4. **Test connectivity**  
    ![](./images/week5-task1-testconnectivity.png)
