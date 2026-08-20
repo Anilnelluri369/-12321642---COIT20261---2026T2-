@@ -12,13 +12,12 @@
    * Connect `Host2` interface `eth0` $\rightarrow$ `Switch1` port `Ethernet1`
    * Connect `Switch1` port `Ethernet2` $\rightarrow$ `Linux-Router` interface `eth0`
    * Connect `Linux-Router` interface `eth1` $\rightarrow$ `Host3` interface `eth0`
-
+![](./images/week5-topology.png)
 #### 2. Device Network Configuration (`/etc/network/interfaces`)
 Before starting any node, configure its static IP address, subnet mask, default gateway, and packet forwarding status.
 
 * **Host 1 Configuration**:
-  1. Right-click **Host1** $\rightarrow$ select **Configure** $\rightarrow$ click **Edit network configuration**.
-  2. Modify the configuration as follows and save:
+ 
      ```ini
      auto eth0
      iface eth0 inet static
@@ -29,8 +28,7 @@ Before starting any node, configure its static IP address, subnet mask, default 
      ```
 
 * **Host 2 Configuration**:
-  1. Right-click **Host2** $\rightarrow$ select **Configure** $\rightarrow$ click **Edit network configuration**.
-  2. Modify the configuration as follows and save:
+  
      ```ini
      auto eth0
      iface eth0 inet static
@@ -41,8 +39,7 @@ Before starting any node, configure its static IP address, subnet mask, default 
      ```
 
 * **Linux Router Configuration**:
-  1. Right-click **Linux-Router** $\rightarrow$ select **Configure** $\rightarrow$ click **Edit network configuration**.
-  2. Configure both connected interfaces to enable IPv4 packet forwarding:
+
      ```ini
      auto eth0
      iface eth0 inet static
@@ -58,8 +55,7 @@ Before starting any node, configure its static IP address, subnet mask, default 
      ```
 
 * **Host 3 Configuration**:
-  1. Right-click **Host3** $\rightarrow$ select **Configure** $\rightarrow$ click **Edit network configuration**.
-  2. Modify the configuration as follows and save:
+
      ```ini
      auto eth0
      iface eth0 inet static
@@ -73,18 +69,12 @@ Before starting any node, configure its static IP address, subnet mask, default 
 
 ### Verification & Terminal Output Analysis
 
-1. **Start Nodes**: Click the **Green Play Button** on the top GNS3 toolbar to power on all devices.
 2. **Verify IP Forwarding Status**:
-   * Open the console on **Linux-Router** and check forwarding status:
      ```bash
      $ sysctl net.ipv4.ip_forward
      net.ipv4.ip_forward = 1
      ```
-   * Open the console on **Host1** and check forwarding status:
-     ```bash
-     $ sysctl net.ipv4.ip_forward
-     net.ipv4.ip_forward = 0
-     ```
+   ![](./images/week5-task1-route.png)
 
 3. **Inspect Kernel Routing Tables (`ip route show`)**:
    * Executing on **Host1**:
@@ -103,22 +93,8 @@ Before starting any node, configure its static IP address, subnet mask, default 
      10.1.2.0/24 dev eth0 proto kernel scope link src 10.1.2.10
      ```
 
-4. **Cross-Subnet Ping Test**:
-   * On **Host1**, send an ICMP echo request to **Host3** across Subnet A and Subnet B:
-     ```bash
-     root@Host1:~# ping -c 4 10.1.2.10
-     PING 10.1.2.10 (10.1.2.10) 56(84) bytes of data.
-     64 bytes from 10.1.2.10: icmp_seq=1 ttl=63 time=1.12 ms
-     64 bytes from 10.1.2.10: icmp_seq=2 ttl=63 time=0.82 ms
-     64 bytes from 10.1.2.10: icmp_seq=3 ttl=63 time=0.85 ms
-     64 bytes from 10.1.2.10: icmp_seq=4 ttl=63 time=0.79 ms
-
-     --- 10.1.2.10 ping statistics ---
-     4 packets transmitted, 4 received, 0% packet loss, time 3003ms
-     ```
-   * *Technical Note*: Standard IPv4 Linux packets initialize with a TTL of `64`. The received `ttl=63` confirms that the packet traversed exactly **1 router hop** (`Linux-Router`).
-
----
+4. **Test connectivity**  
+   ![](./images/week5-task1-testconnectivity.png)
 
 ## Task 2: Dynamic Routing with OSPF (FRRouting)
 
